@@ -1,0 +1,644 @@
+body{
+    margin: 0px;  /*body has some margin added to it so set it to 0px*/
+    font-family: 'Roboto',sans-serif;
+    font-size: 30px;
+    box-sizing:border-box;
+}
+ /*Header*/
+#body-header{
+    height: 65vh;   /*by default the height is set as 0 so set it according to your need*/
+    opacity: 1;
+    background-image: url(static/1.jpg);
+     background-size: cover; /*Resize the background image to cover the entire container, even if it has to stretch the image or cut a little bit off one of the edges*//* Contain = Resize the background image to make sure the image is fully visible*/
+    background-position: center ;
+    background-attachment: fixed; /*The background image will not scroll with the page*/
+    padding-top: 1.2rem;
+}
+.bars{
+    color: white;
+    margin: 0;
+    margin-left:95%;
+    display: none;
+}
+
+.bars i {
+    font-size: 2rem;
+}
+.dropdown-list{
+    margin: 0;
+    display: none;
+    background-color: #7c4ec7;
+    box-shadow: 0px 4px 8px 5px #4c4d49;
+}
+.dropdown-list ul{
+    margin: 0.2rem 0.2rem;
+    text-align: left;
+    padding: 0px 0.8rem;
+}
+.dropdown-menu:hover .dropdown-list{
+    display: block;
+    position: absolute;
+    right: 3%;
+}
+.dropdown-list li{
+    margin: 0.4rem 0px;
+}
+
+.no-list-style{
+    list-style: none;
+}
+
+.no-list-style li {
+    font-weight: 100;
+    font-size: 0.9rem;
+}
+
+.no-list-style li a{
+    list-style: none;
+    color: white;
+    text-decoration: none;
+}
+@media only screen and (max-width: 999px){
+    .bars {
+        display: block;
+    }
+    .nav-menu {
+        display: none;
+    } 
+}
+
+/*  NAVBAR  (Horizintal-list)  */
+.horizontal-list{
+    list-style: none; /* to remove the bullet of the unordered list*/
+    padding-left: 0px; /*there were some padding added to the list so remove it*/
+    margin:0px;
+}
+.horizontal-list li{
+    display: inline-block; /*list are block element so make it inline-block*/
+    margin : 0px 25px 25px 0px; /* top right bottom left*/
+    font-weight: bolder;
+    font-size: 1.5rem;
+    
+}
+.horizontal-list li a{
+    color: white;
+    text-decoration: none; /* to remove the underline from the anchor tag */
+    
+    
+}
+.nav-menu li a{
+    transition: color 0.5s , border-bottom 5s;
+}
+.nav-menu li a:hover{
+    color: lightgrey;
+    border-bottom: 1px solid black;
+    
+}
+.text-center{
+    text-align: center;
+}
+
+/* My Name and social icon */
+
+#name-social-container {
+    margin-top: 15vh;
+}
+
+ #my-name {
+    font-size: 3.5rem;
+    letter-spacing: 0.1rem;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    
+    
+}
+.social {
+    position: fixed;
+    top: 70%;
+    left: 10px;
+    width:55px;
+    height:55px;
+    line-height: 1;
+    z-index:4;
+}
+.social .social-btn{
+    display: block;
+    padding: 14px 13px;
+    color:#ffffff;;
+}
+.social .social-icon{
+    width:19px;
+}
+#linkedin {
+    background-color: #0077b5;
+  }
+  
+  #linkedin:hover {
+    background-color: #00121c;
+  }
+  #github{
+      background-color: black;
+  }
+  #github:hover{
+      background-color: rgb(5, 29, 73);
+  }
+  
+
+/* Main Section */
+/*Section Classes*/
+
+section {
+    width: 100%;
+    /*height: 75vh;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+
+
+section:nth-child(2n) {
+    background-color: #9e9b9b29;
+}
+
+section:nth-child(2n + 1) {
+    background-color: white;
+}
+.section-heading{
+    width:auto;
+    padding:20px 10px 10px;
+    
+    font-weight: 400;
+}
+.section-heading span{
+    font-size:40px;
+    /* color:#2857a4; */
+    color:rgb(48, 11, 107);
+    font-weight: bolder;
+    display: inline-block;
+    padding-top:10px;
+    margin-right: 0.5rem;
+}
+
+
+/* About*/
+#about{
+   height: auto; 
+   width: 100%;
+   position: relative; /* this will bring the image over the header background image*/
+}
+#my-image{
+    height: 12rem;
+    width: 12rem;
+    margin:auto;
+    margin-top:-15vh
+
+}
+#my-image img{
+    height:100%;
+    width:100%;
+    border-radius:50%;
+    border: 3px solid white;
+    box-shadow: 1px 1px 10px 2px lightgrey;
+} 
+
+
+#about-para {
+    padding: 10px;
+    width: 70%;
+    height: 100%;
+    /* margin: auto; */
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    color: grey;
+    line-height: 28px;
+    font-weight: 100;
+    font-size: 1.1rem;
+}
+
+
+
+
+/* SKILL SECTION  */
+.skills-display{
+
+    width: 75%;
+    padding: 10px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.skills-progress{
+    
+
+    width: 11rem;
+    height: 2.2rem;
+    background-color: lightgrey;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 2px 1px #b9b9b9 inset;
+    margin: 25px;
+    overflow: hidden;
+}
+.eightyfive-percent-of-skill-known{
+    width: 85%;
+    height:inherit;
+    
+}
+.skills-progress>div{
+    border-radius:12px 0px 0px 12px;
+    box-shadow: 1px 1px 55px 7px #797976;
+}
+.skill-name{
+    width:6rem;
+    height:1.4rem;
+}
+.skill-name span{
+    color: white;
+    font-size: 1rem;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+/*  Work experience section */
+/* Timeline */
+.timeline{
+    position:relative;
+    width:90%;
+    /* border: 2px solid black; */
+}
+.timeline-box{
+    position:relative;
+    box-sizing:border-box;
+    margin:5px;
+    width:40%;
+    left:2%;
+    padding:20px;
+    min-height:150px;
+    /* border:2px dashed rgb(100, 18, 133); */
+    display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	overflow-wrap: break-word;
+    background-color: rgb(245,245,245);
+}
+.timeline-box:nth-child(2n){
+    left:58%;
+}
+.timeline-box:nth-child(2n + 1) {
+	align-items: flex-end;
+}
+.timeline-box:nth-child(2n) {
+	align-items: flex-start;
+}
+
+.timeline-box-heading span img{
+    height:50px;
+    width:50px;
+    margin-right:20px;
+}
+.timeline-box-heading{
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    
+}
+
+.timeline-box:nth-child(2n + 1) .timeline-box-heading span:nth-child(2) {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+.timeline-box:nth-child(2n).timeline-box-heading span:nth-child(2) {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+} 
+.timeline-box-title{
+    color:#0000a9;
+    font-weight:900;
+    font-size: 18px;
+    font-family: sans-serif;
+    width:100%;
+    overflow-wrap:break-word;
+}
+.timeline-box-company-name{
+    color: orange;
+	font-size: large;
+	font-family: comic sans ms;
+	font-weight: bold;
+}
+.timeline-box-duration{
+    color:darkslategrey;
+    font-size:large;
+    margin-bottom:6px;
+}
+.timeline-box-description{
+    font-size:1rem;
+    justify-content: center;
+    text-align: justify;
+    font-weight: bold;
+    margin-top:5px;
+}
+.timeline-divider{
+    position:absolute;
+    height:80%;
+    width: 0px;
+    border: 1px dashed #faae8b;
+    top: 10%;
+    left:50%;
+}
+.timeline-travaller{
+    position:sticky;
+    top:25%;
+    transform:rotate(92deg);
+    z-index:3;
+}
+.timeline-travaller i{
+    color:rgb(169, 20, 228);
+    
+}
+.timeline-box::after{
+    content: '';
+    position:absolute;;
+    border-radius:50%;
+    width: 0.6rem;
+    height:0.6rem;
+    background-color:rgb(185, 183, 187);
+}
+.timeline-box:nth-child(2n)::after{
+    top:30%;
+    left:-21.5%;
+    z-index:1;
+}
+.timeline-box:nth-child(2n+1)::after{
+    top:20%;
+    right:-20.6%;
+    z-index:2;
+}
+@media screen and (max-width:600px){  /*destop first */
+    .timeline-divider{
+        left:5%;
+    }
+    .timeline-box{
+        left:12% !important;
+        width: 80%;
+    }
+    html{
+        font-size:13px;
+    }
+    h1 span i{
+        font-size:35px;
+    }
+    h1 span:nth-child(2){
+        font-size:35px;
+    }
+    /*.timeline-box:nth-child(2n){
+        left:12%;
+    }*/
+    .timeline-box::after{
+        left: -11% !important;
+    }
+    /* .timeline-box:nth-child(2n)::after{
+        left:-12%;
+    }
+    .timeline-box:nth-child(2n){
+        left:12%;
+    }*/
+
+} 
+
+/*Portfolio Section */
+#portfolio-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 50px;
+    margin-bottom: 20px;
+    justify-content: space-around;
+}
+
+.portfolio-image-container {
+    max-width: 300px;
+    overflow: hidden;
+    margin: 10px;
+     background-size: cover;
+   background-repeat: no-repeat;
+    position: relative;
+} 
+.portfolio-image-container img {
+    width: 100%;
+    height: 100%;
+}
+
+ .portfolio-details  {
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+     height: 100%;
+    color: transparent;
+    text-align: center;
+    padding: 10px;
+}
+.portfolio-details a p{
+    color: #00121c;
+    font-size: 25px;
+}
+.Colorchange a p{
+    color: white;
+} 
+
+.portfolio-image-container:hover {
+    box-shadow: 0 0 20px #74ADC8;
+}
+
+.portfolio-image-container:hover .portfolio-details {
+    background-color: #80808078;
+    color: white;
+}
+
+
+
+/* Contact */
+#contact{
+    /* background-image: linear-gradient(  207deg, #403066 48% , #2857a4); */
+    background-image: linear-gradient(  207deg, #38216d 48% , #0e3470);
+    color: white;
+}
+#contact h1, #contact h1 span{
+    color: white;
+}
+#contact-form {
+    margin-left: 20%;
+}
+#contact-container{
+    display: flex;
+    flex-wrap: wrap;
+  
+    box-sizing: border-box;
+    justify-content: space-evenly; 
+   
+}
+#my-contact-details {
+    width: 100%;
+    margin-left: 6%;
+    margin-bottom:40px;
+    
+}
+#my-contact-details h3 {
+    color: white;
+    font-weight: 550;
+    font-size: 1.2rem;
+}
+#contact-form-details{
+    width: 50%;
+   
+}
+#my-contact-details p{
+    color: #d9dcdd;
+    font-size: 0.9rem;
+}
+.my-details-info-container {
+    margin-bottom: 20px;
+    color: #d9dcdd;
+    font-size: 1rem;
+}
+
+.my-details-info-container span {
+    margin-left: 0.4rem;
+}
+
+.my-details-info-container i {
+    color: white;
+}
+
+#contact-form input,
+textarea {
+    max-width: 90%;
+    margin: 15px;
+    padding: 4px 10px;
+    border: 0px solid transparent;
+    border-bottom: 2px solid white;
+    color: #d9dcdd;
+    background: transparent;
+    width: 90%;
+    line-height: 1.6;
+    font-size: 1.05rem;
+}
+
+#contact-form button[type="submit"] {
+    background: transparent;
+    font-size: 0.95rem;
+    border: 2px solid white;
+    margin-top: 5%;
+    margin-left: 35%;
+    border-radius: 2px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.046875em;
+    line-height: 1;
+    padding: 0.8em 0.8em 0.78em;
+    text-transform: uppercase;
+}
+
+#contact-form button:hover {
+    background: white;
+    color: #13386fe0;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+#contact .social-icons li a i {
+    font-size: 1.2rem;
+    margin: 40px 10px 10px;
+    padding: 10px 14px 20px 10px;
+
+}
+@media screen and (max-width : 750px){
+    #contact-form {
+        margin-left: 0%;
+    }
+
+    #contact-container {
+        flex-wrap: wrap;
+    }
+
+    #my-contact-details {
+        width: 80%;
+        margin: 10%;
+    }
+
+    #contact-form-details {
+        width: 200%;
+        margin: 10%;
+    }
+}
+/* Common Margin Classes */
+.mb75px{
+    margin-bottom: 75px;
+}
+/* Common Color Classes */
+.text-highlight {
+    color: #3b0a64;
+    font-weight: 600;
+}
+
+/*setting background-color */
+.mb-blue{
+    background-color: #2857a4;
+}
+.mb-orange {
+    background-color: #ec4d1c;
+}
+
+.mb-teal {
+    background-color: #0b8176;
+}
+
+.mb-light-purple {
+    background-color: #93738c;
+}
+.mb-green {
+    background-color: #6bdb20;
+}
+.mb-pink {
+    background-color: #c8368b;
+}
+
+
+
+
+/*Percentage Classes */
+
+.eightyfive-percent-of-skill-known  {
+    height: inherit;
+    width: 85%;
+}
+.eighty-percent-of-skill-known {
+    height: inherit;
+    width: 80%;
+}
+.seventyfive-percent-of-skill-known  {
+    height: inherit;
+    width: 75%;
+}
+.seventy-percent-of-skill-known  {
+    height: inherit;
+    width: 70%;
+}
+.sixtyfive-percent-of-skill-known  {
+    height: inherit;
+    width: 65%;
+}
+
+.fifty-percent-of-skill-known {
+    height: inherit;
+    width: 50%;
+}
+
